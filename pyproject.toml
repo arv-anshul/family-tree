@@ -1,0 +1,18 @@
+[project]
+name = "family-tree"
+version = "0.1.0"
+description = "A simple Family Tree program."
+authors = [{ name = "Anshul Raj Verma", email = "arv.anshul.1864@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+draw = ["graphviz==0.20.1", "networkx==3.2.1", "matplotlib==3.8.3"]
+
+[tool.rye]
+managed = true
+dev-dependencies = ["ipykernel==6.29.3", "pytest==8.0.2"]
+
+[tool.rye.scripts]
+family_tree = 'python -m family_tree.family_tree'
